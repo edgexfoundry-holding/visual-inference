@@ -74,6 +74,10 @@ For testing the Video Analytics Serving with EdgeX Integration, go to demo/ dire
 
 With the service running, initiate a request to start a pipeline using the following commands.
 ```bash
+$ cd demo/
+
+$ sudo docker-compose up
+
 $ curl localhost:8080/pipelines/object_detection/3 -X POST -H 'Content-Type: application/json' -d '{ "source": { "uri": "https://github.com/intel-iot-devkit/sample-videos/blob/master/bottle-detection.mp4?raw=true", "type": "uri" }, "destination": { "type": "mqtt", "host": "mqtt:1883", "topic":"AnalyticsData"}}'
 
 $ curl http://localhost:48080/api/v1/reading/device/MQTTVideoAnalyticservice/10 | json_pp
