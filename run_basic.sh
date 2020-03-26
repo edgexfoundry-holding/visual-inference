@@ -1,0 +1,1 @@
+ sudo docker run -it -p 8080:8080 -v /tmp:/tmp --name video_analytics_serving_gstreamer_edgex --rm video_analytics_serving_gstreamer_edgex:0.2.2
